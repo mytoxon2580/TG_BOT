@@ -1,10 +1,11 @@
 import asyncio
+import os
 from aiogram import Bot, Dispatcher, F, types
 from aiogram.filters import CommandStart
 from aiogram.utils.keyboard import ReplyKeyboardBuilder
 
-BOT_TOKEN = os.getenv ("BOT_TOKEN")
-GROUP_CHAT_ID = int(os.getenv ("GROUP_CHAT_ID"))
+BOT_TOKEN = os.getenv("BOT_TOKEN")
+GROUP_CHAT_ID = int(os.getenv("GROUP_CHAT_ID"))
 
 bot = Bot(token=BOT_TOKEN)
 dp = Dispatcher()
@@ -89,5 +90,5 @@ async def main():
     await dp.start_polling(bot)
 
 
-if __name__ == "__main__":
+if name == "main":
     asyncio.run(main())
